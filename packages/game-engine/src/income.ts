@@ -1,0 +1,2 @@
+// Income calculation (placeholder).
+export {};

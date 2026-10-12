@@ -1,0 +1,2 @@
+// Player types (placeholder).
+export {};
