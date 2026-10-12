@@ -1,0 +1,2 @@
+// Combat resolution (placeholder).
+export {};

@@ -1,0 +1,2 @@
+// Zone types (placeholder).
+export {};
