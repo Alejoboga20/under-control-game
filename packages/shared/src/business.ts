@@ -1,7 +1,7 @@
 export type BusinessId = string;
 
-// Provisional set taken from the overview; the MVP rules don't define businesses yet.
-export const BUSINESS_TYPES = ['kiosk', 'bar'] as const;
+// Garito is illegal: high income, but raises Police Attention every round.
+export const BUSINESS_TYPES = ['kiosk', 'bar', 'garito'] as const;
 
 export type BusinessType = (typeof BUSINESS_TYPES)[number];
 

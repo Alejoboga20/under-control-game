@@ -15,6 +15,7 @@ export type Player = {
   color: PlayerColor;
   characterId: CharacterId | null;
 
+  // Money is stored in $, the other resources in units.
   resources: ResourcePool;
   // 0–100. Negative metric that drives the chance of a police raid.
   policeAttention: number;
