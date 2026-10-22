@@ -14,6 +14,21 @@ export default tseslint.config(
     languageOptions: { globals: globals.node },
   },
   {
+    // The game engine must stay deterministic: randomness comes from rng.ts, time from inputs.
+    files: ['packages/game-engine/**/*.ts'],
+    rules: {
+      'no-restricted-properties': [
+        'error',
+        { object: 'Math', property: 'random', message: 'Use createRng from rng.ts instead.' },
+        { object: 'Date', property: 'now', message: 'Receive the current time as an input.' },
+      ],
+      'no-restricted-syntax': [
+        'error',
+        { selector: 'NewExpression[callee.name="Date"]', message: 'Receive dates as inputs.' },
+      ],
+    },
+  },
+  {
     files: ['apps/web/**/*.{ts,tsx}'],
     languageOptions: { globals: globals.browser },
     plugins: { 'react-hooks': reactHooks, 'react-refresh': reactRefresh },
