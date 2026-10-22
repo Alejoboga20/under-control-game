@@ -44,6 +44,7 @@ type TerritoryBase = {
 // Attributes rolled at game start. They never change, so ceding a territory
 // back to the Government restores exactly these values.
 export type TerritoryStats = {
+  // Points per round. Money points are converted to $ with the money unit from the balance config.
   production: ResourcePool;
   resistance: number;
   economicValue: number;
