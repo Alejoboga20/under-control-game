@@ -51,8 +51,9 @@ export type GameState = {
   police: PoliceState;
   setup: SetupState | null;
 
-  // Seed for the engine's RNG so turn resolution stays deterministic.
-  rngSeed: number;
+  // Internal state of the engine's seeded RNG. Starts as the game seed and is
+  // stored back after every random draw so resolution stays deterministic.
+  rngState: number;
 
   events: GameEvent[];
   standings: PlayerStanding[] | null;
